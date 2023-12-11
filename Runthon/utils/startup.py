@@ -331,7 +331,7 @@ async def verifyLoggerGroup():
         descript = "لا تقم بحذف هذه المجموعة أو التغيير إلى مجموعة عامه (وظيفتهـا تخزيـن كـل سجـلات وعمليـات البـوت.)"
         photozed = await zedub.upload_file(file="zedthon/malath/Tepthon.jpg")
         _, groupid = await create_supergroup(
-            "كـروب السجـل تيـبثون", zedub, Config.TG_BOT_USERNAME, descript, photozed
+            "كـروب السجـل رنثـون", zedub, Config.TG_BOT_USERNAME, descript, photozed
         )
         addgvar("PRIVATE_GROUP_BOT_API_ID", groupid)
         print(
@@ -367,7 +367,7 @@ async def verifyLoggerGroup():
         flag = True
     if flag:
         executable = sys.executable.replace(" ", "\\ ")
-        args = [executable, "-m", "Tepthon"]
+        args = [executable, "-m", "Runthon"]
         os.execle(executable, *args, os.environ)
         sys.exit(0)
 
@@ -398,4 +398,4 @@ async def install_externalrepo(repo, branch, cfolder):
         )
     if os.path.exists(rpath):
         await runcmd(f"pip3 install --no-cache-dir -r {rpath}")
-    await load_plugins(folder="Tepthon", extfolder=cfolder)
+    await load_plugins(folder="Runthon", extfolder=cfolder)
