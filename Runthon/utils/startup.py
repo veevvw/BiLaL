@@ -34,7 +34,7 @@ from .pluginmanager import load_module
 from .tools import create_supergroup
 
 ENV = bool(os.environ.get("ENV", False))
-LOGS = logging.getLogger("𝐬𝐨𝐮𝐫𝐜𝐞 𝐭𝐞𝐩𝐭𝐡𝐨𝐧")
+LOGS = logging.getLogger("𝗦𝗢𝗨𝗥𝗖𝗘 𝐑𝐔𝐍𝐓𝐇𝐎𝐍")
 cmdhr = Config.COMMAND_HAND_LER
 
 heroku_api = "https://api.heroku.com"
@@ -55,7 +55,7 @@ bot = zedub
 DEV = 1260465030
 
 
-async def autovars(): #Code by T.me/E_7_V
+async def autovars(): #Code by T.me/NUNUU
     if "ENV" in heroku_var:
         return
     LOGS.info("جـارِ اضافـة بقيـة الفـارات .. تلقائيـاً")
@@ -68,7 +68,7 @@ async def autovars(): #Code by T.me/E_7_V
     LOGS.info("تم اضافـة بقيـة الفـارات .. بنجـاح")
 
 
-async def autoname(): #Code by T.me/E_7_V
+async def autoname(): #Code by T.me/NUNUU
     if Config.ALIVE_NAME:
         return
     await bot.start()
@@ -120,7 +120,7 @@ async def setup_bot():
         LOGS.error(f"كـود تيرمكس - {str(e)}")
         sys.exit()
 
-async def mybot(): # By T.me/E_7_V
+async def mybot(): # By T.me/NUNUU
     ROGER = bot.me.first_name
     Narcissus = bot.uid
     ba_roger = f"[{ROGER}](tg://user?id={Narcissus})"
@@ -155,13 +155,13 @@ async def mybot(): # By T.me/E_7_V
             await asyncio.sleep(1)
             await bot.send_message("@BotFather", botname)
             await asyncio.sleep(1)
-            await bot.send_message("@BotFather", f"- بـوت تيـبثون المسـاعـد ♥️🦾 الخـاص بـ  {bot.me.first_name} ")
+            await bot.send_message("@BotFather", f"- بـوت رنثــون المسـاعـد ♥️🦾 الخـاص بـ  {bot.me.first_name} ")
             await asyncio.sleep(3)
             await bot.send_message("@BotFather", "/setdescription")
             await asyncio.sleep(1)
             await bot.send_message("@BotFather", botname)
             await asyncio.sleep(1)
-            await bot.send_message("@BotFather", f"•⎆┊انـا البــوت المسـاعـد الخــاص بـ {ba_roger} \n•⎆┊بـواسطـتـي يمكـنك التواصــل مـع مـالكـي 🧸♥️\n•⎆┊قنـاة السـورس 🌐 @Tepthon 🌐")
+            await bot.send_message("@BotFather", f"•⎆┊انـا البــوت المسـاعـد الخــاص بـ {ba_roger} \n•⎆┊بـواسطـتـي يمكـنك التواصــل مـع مـالكـي 🧸♥️\n•⎆┊قنـاة السـورس 🌐 @xLxLxLrr3 🌐")
         except Exception as e:
             print(e)
 
@@ -180,7 +180,7 @@ async def startupmessage():
                 BOTLOG_CHATID,
                 "https://graph.org/file/b920419da499a55479a15.jpg",
                 caption="**•⎆┊تـم بـدء تشغـيل سـورس تيـبثون الخاص بك .. بنجاح 🧸♥️**",
-                buttons=[(Button.url("𝐬𝐨𝐮𝐫𝐜𝐞 𝐭𝐞𝐩𝐭𝐡𝐨𝐧𓅛", "https://t.me/Tepthon"),)],
+                buttons=[(Button.url("𝗦𝗢𝗨𝗥𝗖𝗘 𝐑𝐔𝐍𝐓𝐇𝐎𝐍𓅛", "https://t.me/xLxLxLrr3"),)],
             )
     except Exception as e:
         LOGS.error(e)
@@ -244,8 +244,8 @@ async def load_plugins(folder, extfolder=None):
         path = f"{extfolder}/*.py"
         plugin_path = extfolder
     else:
-        path = f"Tepthon/{folder}/*.py"
-        plugin_path = f"Tepthon/{folder}"
+        path = f"Runthon/{folder}/*.py"
+        plugin_path = f"Runthon/{folder}"
     files = glob.glob(path)
     files.sort()
     success = 0
