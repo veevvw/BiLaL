@@ -18,7 +18,7 @@ from telethon import Button, functions, types, utils
 from telethon.tl.functions.channels import JoinChannelRequest
 from telethon.tl.functions.contacts import UnblockRequest
 
-from Tepthon import BOTLOG, BOTLOG_CHATID, PM_LOGGER_GROUP_ID
+from Runthon import BOTLOG, BOTLOG_CHATID, PM_LOGGER_GROUP_ID
 
 from ..Config import Config
 from ..core.logger import logging
@@ -94,7 +94,7 @@ async def autoname(): #Code by T.me/NUNUU
 
 async def setup_bot():
     """
-    To set up bot for Tepthon
+    To set up bot for Runthon
     """
     try:
         await zedub.connect()
@@ -149,7 +149,7 @@ async def mybot(): # By T.me/NUNUU
             await asyncio.sleep(1)
             await bot.send_message("@BotFather", botname)
             await asyncio.sleep(1)
-            await bot.send_file("@BotFather", "Tepthon/zilzal/logozed.jpg")
+            await bot.send_file("@BotFather", "Runthon/zilzal/logozed.jpg")
             await asyncio.sleep(3)
             await bot.send_message("@BotFather", "/setabouttext")
             await asyncio.sleep(1)
