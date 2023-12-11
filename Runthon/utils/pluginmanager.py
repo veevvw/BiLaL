@@ -3,7 +3,7 @@ import importlib
 import sys
 from pathlib import Path
 
-from Tepthon import CMD_HELP, LOAD_PLUG
+from Runthon import CMD_HELP, LOAD_PLUG
 
 from ..Config import Config
 from ..core import LOADED_CMDS, PLG_INFO
@@ -14,23 +14,23 @@ from ..helpers.tools import media_type
 from ..helpers.utils import _zedtools, _zedutils, _format, install_pip, reply_id
 from .decorators import admin_cmd, sudo_cmd
 
-LOGS = logging.getLogger("سورس تيبثون")
+LOGS = logging.getLogger("سورس رنثون")
 
 
 def load_module(shortname, plugin_path=None):
     if shortname.startswith("__"):
         pass
     elif shortname.endswith("_"):
-        path = Path(f"Tepthon/plugins/{shortname}.py")
+        path = Path(f"Runthon/plugins/{shortname}.py")
         checkplugins(path)
-        name = "Tepthon.plugins.{}".format(shortname)
+        name = "Runthon.plugins.{}".format(shortname)
         spec = importlib.util.spec_from_file_location(name, path)
         mod = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(mod)
         LOGS.info(f"تـم تثبيت ملـف {shortname}")
     else:
         if plugin_path is None:
-            path = Path(f"Tepthon/plugins/{shortname}.py")
+            path = Path(f"Runthon/plugins/{shortname}.py")
             name = f"Tepthon.plugins.{shortname}"
         else:
             path = Path((f"{plugin_path}/{shortname}.py"))
@@ -58,7 +58,7 @@ def load_module(shortname, plugin_path=None):
         mod.borg = zedub
         spec.loader.exec_module(mod)
         # for imports
-        sys.modules[f"Tepthon.plugins.{shortname}"] = mod
+        sys.modules[f"Runthon.plugins.{shortname}"] = mod
         LOGS.info(f"تـم تثبيت ملـف {shortname}")
 
 
@@ -82,7 +82,7 @@ def remove_plugin(shortname):
             zedub.remove_event_handler(i)
         del LOAD_PLUG[shortname]
     try:
-        name = f"Tepthon.plugins.{shortname}"
+        name = f"Runthon.plugins.{shortname}"
         for i in reversed(range(len(zedub._event_builders))):
             ev, cb = zedub._event_builders[i]
             if cb.__module__ == name:
