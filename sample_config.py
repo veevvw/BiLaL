@@ -31,7 +31,7 @@ class Config(object):
     TZ = os.environ.get("TZ", "Asia/Baghdad")
     # set this with required zed repo link
     UPSTREAM_REPO = os.environ.get(
-        "UPSTREAM_REPO", "https://github.com/Tepthonee/thesource"
+        "UPSTREAM_REPO", "https://github.com/RRR8RR/Runthon"
     )
     # External plugins repo
     EXTERNAL_REPO = os.environ.get("EXTERNAL_REPO", None)
@@ -66,7 +66,7 @@ class Config(object):
         or 0
     )
 
-    #فارات تيـبثون
+    #فارات سيدثون
     CUSTOM_ALIVE_TEXT = os.environ.get("CUSTOM_ALIVE_TEXT", None)
     CUSTOM_ALIVE_EMOJI = os.environ.get("CUSTOM_ALIVE_EMOJI", None)
     CUSTOM_ALIVE_EMZED = os.environ.get("CUSTOM_ALIVE_EMZED", None)
@@ -193,6 +193,6 @@ class Config(object):
 class Production(Config):
     LOGGER = False
 
-
+#المطور BiLaL
 class Development(Config):
     LOGGER = True
