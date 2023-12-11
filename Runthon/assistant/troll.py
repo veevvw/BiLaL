@@ -4,14 +4,14 @@ import re
 
 from telethon.events import CallbackQuery
 
-from Tepthon import zedub
+from Runthon import zedub
 
 
 @zedub.tgbot.on(CallbackQuery(data=re.compile(b"troll_(.*)")))
 async def on_plug_in_callback_query_handler(event):
     timestamp = int(event.pattern_match.group(1).decode("UTF-8"))
-    if os.path.exists("./Tepthon/troll.txt"):
-        jsondata = json.load(open("./Tepthon/troll.txt"))
+    if os.path.exists("./Runthon/troll.txt"):
+        jsondata = json.load(open("./Runthon/troll.txt"))
         try:
             message = jsondata[f"{timestamp}"]
             userid = message["userid"]
@@ -24,7 +24,7 @@ async def on_plug_in_callback_query_handler(event):
                 encrypted_tcxt = message["text"]
                 reply_pop_up_alert = encrypted_tcxt
         except KeyError:
-            reply_pop_up_alert = "- عذرًا .. هذه الرسـالة لم تعد موجودة في سيـرفرات تــيبثون"
+            reply_pop_up_alert = "- عذرًا .. هذه الرسـالة لم تعد موجودة في سيـرفرات رنثون"
     else:
-        reply_pop_up_alert = "- عذرًا .. هذه الرسـالة لم تعد موجودة في سيـرفرات تيبثـون"
+        reply_pop_up_alert = "- عذرًا .. هذه الرسـالة لم تعد موجودة في سيـرفرات رنثون"
     await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
