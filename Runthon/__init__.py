@@ -14,8 +14,8 @@ from .sql_helper.globals import addgvar, delgvar, gvarstatus
 
 __version__ = "3.1.1"
 __license__ = "GNU Affero General Public License v3.0"
-__author__ = "Tepthon <https://github.com/Tepthonee/thesource>"
-__copyright__ = "Tepthon Copyright (C) 2021 - 2022  {__author__}"
+__author__ = "Runthon <https://github.com/RRR8RR/Runthon>"
+__copyright__ = "Runthon Copyright (C) 2021 - 2022  {__author__}"
 
 zedub.version = __version__
 zedub.tgbot.version = __version__
