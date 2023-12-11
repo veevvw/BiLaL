@@ -58,7 +58,7 @@ async def startup_process():
     await load_plugins("assistant")
 async def qruan_process():
     await verifyLoggerGroup()
-    await load_plugins("vc_baqir")
+    await load_plugins("vc_bilal")
     print("➖➖➖➖➖ سورس رنـثـون™ ➖➖➖➖➖")
     print("تـم التنصـيب .. بنجـاح ✓")
     print(
