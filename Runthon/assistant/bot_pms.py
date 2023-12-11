@@ -8,7 +8,7 @@ from telethon.errors import UserIsBlockedError
 from telethon.events import CallbackQuery, StopPropagation
 from telethon.utils import get_display_name
 
-from Tepthon import Config, zedub
+from Runthon import Config, zedub
 
 from ..core import check_owner, pool
 from ..core.logger import logging
@@ -107,13 +107,13 @@ async def bot_start(event):
             start_msg = f"**❈╎مرحبًا بـك عزيـزي  {mention} **\
                         \n**❈╎انـا {my_mention}' **\
                         \n**❈╎ يمكنك التواصل مع مالك البوت فقط قم بـ إرسـال رسالتك .**\
-                        \n\n**❈╎البـوت خـاص بسـورس :** [𝗧𝗘𝗣𝗧𝗛𝗢𝗡 𓅛](https://t.me/Tepthon)"
+                        \n\n**❈╎البـوت خـاص بسـورس :** [Runthon 𓅛](https://t.me/xLxLxLrr3)"
         buttons = [
             (
-                Button.url("قنـاة السـورس", "https://t.me/Tepthon"),
+                Button.url("قنـاة السـورس", "https://t.me/xLxLxLrr3"),
                 Button.url(
                     "مطـور السـورس",
-                    "https://t.me/PPF22",
+                    "https://t.me/BxxBxxL",
                 ),
             )
         ]
