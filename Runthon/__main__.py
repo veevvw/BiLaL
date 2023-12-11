@@ -1,6 +1,6 @@
 import sys
-import Tepthon
-from Tepthon import BOTLOG_CHATID, PM_LOGGER_GROUP_ID
+import Runthon
+from Runthon import BOTLOG_CHATID, PM_LOGGER_GROUP_ID
 from .Config import Config
 from .core.logger import logging
 from .core.session import zedub
@@ -13,10 +13,10 @@ from .utils import (
     verifyLoggerGroup,
 )
 
-LOGS = logging.getLogger("سورس تيبثون")
+LOGS = logging.getLogger("سورس رنـثون")
 
-print(Tepthon.__copyright__)
-print(f"المرخصة بموجب شروط  {Tepthon.__license__}")
+print(Runthon.__copyright__)
+print(f"المرخصة بموجب شروط  {Runthon.__license__}")
 
 cmdhr = Config.COMMAND_HAND_LER
 
@@ -29,15 +29,15 @@ except Exception as e:
     sys.exit()
 
 if not Config.ALIVE_NAME:
-    try: #Code by T.me/E_7_V
+    try: #Code by T.me/NUNUU
         LOGS.info("⌭ بـدء إضافة الاسـم التلقـائـي ⌭")
         zedub.loop.run_until_complete(autoname())
         LOGS.info("✓ تـم إضافة فار الاسـم .. بـنجـاح ✓")
     except Exception as e:
         LOGS.error(f"- {e}")
 
-try: #Code by T.me/E_7_V
-    LOGS.info("⌭ بـدء تنزيـل تيـبثون ⌭")
+try: #Code by T.me/NUNUU
+    LOGS.info("⌭ بـدء تنزيـل رنـثـون ⌭")
     zedub.loop.run_until_complete(setup_bot())
     LOGS.info("⌭ بـدء تشغيل البـوت ⌭")
 except Exception as e:
@@ -59,10 +59,10 @@ async def startup_process():
 async def qruan_process():
     await verifyLoggerGroup()
     await load_plugins("vc_baqir")
-    print("➖➖➖➖➖ سورس تيبثون™ ➖➖➖➖➖")
+    print("➖➖➖➖➖ سورس رنـثـون™ ➖➖➖➖➖")
     print("تـم التنصـيب .. بنجـاح ✓")
     print(
-        f"⌔┊تـم تنصيـب تيبثـون يـوزر بـوت . . بنجـاح 🧸♥️ \n\n⌔┊تحيـاتي ..  محـمد\n⌔┊قنـاة السـورس ↶.\n🌐┊@Tepthon"
+        f"⌔┊تـم تنصيـب رنـثـون يـوزر بـوت . . بنجـاح 🧸♥️ \n\n⌔┊تحيـاتي ..  علش\n⌔┊قنـاة السـورس ↶.\n🌐┊@xLxLxLrr3"
     )
     print("➖➖➖➖➖ سورس تيبثون™ ➖➖➖➖➖")
     await verifyLoggerGroup()
