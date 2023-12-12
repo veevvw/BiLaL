@@ -11,7 +11,7 @@ from telethon import Button
 from telethon.errors import BotMethodInvalidError
 from telethon.events import CallbackQuery, InlineQuery
 
-from Tepthon import zedub
+from Runthon import zedub
 
 from ..Config import Config
 from ..core.decorators import check_owner
