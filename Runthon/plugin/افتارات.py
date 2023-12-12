@@ -11,9 +11,9 @@ from telethon import events
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 from telethon.tl.types import InputMessagesFilterVideo, InputMessagesFilterVoice, InputMessagesFilterPhotos
 
-from Tepthon import zedub
+from Runthon import zedub
 
-from Tepthon.core.logger import logging
+from Runthon.core.logger import logging
 from ..Config import Config
 from ..core.managers import edit_delete, edit_or_reply
 from . import ALIVE_NAME, mention
